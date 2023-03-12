@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            max-width: 776px;
+            margin: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .container input{
+            width: 50%;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .container button, .sub-container button{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+        }
+        .sub-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Please Contact US!</h1>
+        <div class="main-container">
+            <div class="container">
+                <input id="name-field" type="text" placeholder="Enter Your Name">
+                <button onclick="deleteName()">Delete Name</button>
+                <button onclick="addName()">ADD Name</button>
+            </div>
+            <div class="container">
+                <input id="email-field" type="email" placeholder="Enter Your E-mail">
+                <button onclick="deleteEmail()">Delete Email</button>
+                <button onclick="addEmail()">ADD Email</button>
+            </div>
+            <div class="container">
+                <input id="message-field" type="text" placeholder="Enter Your Message">
+                <button onclick="deleteMessage()">Delete Message</button>
+                <button onclick="addMessage()">ADD Message</button>
+            </div>
+        </div>
+        <div class="sub-container">
+            <button onclick="sendAll()">Send</button>
+            <button onclick="resetAll()">Reset</button>
+        </div>
+    </section>
+
+    <script src="libs.js"></script>
+</body>
+</html>
